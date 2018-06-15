@@ -1,5 +1,0 @@
-set shiftwidth=3
-ab def DEFINITION MODULE
-ab imp IMPLEMENTATION MODULE
-ab proc PROCEDURE
-ab tra TRANSACTION
