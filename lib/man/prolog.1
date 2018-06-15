@@ -1,0 +1,126 @@
+.TH PROLOG 1 "local:Borchert"
+.SH NAME
+prolog \- Modula--Prolog interpreter
+.SH SYNOPSIS
+.B prolog
+.RB [ \(miis ]
+[file...]
+.SH DESCRIPTION
+.I Prolog
+is an interactive user interface to the UNIX version of the
+Modula--Prolog system.
+The interpreter is compatible to the Prolog language as described
+in Clocksin & Mellish.
+.PP
+Files to be consulted must end in `.pdb'
+(\fBp\fProlog \fBd\fPata\fBb\fPase)
+and are to be given
+without suffix.
+The search path may be specified by the environment variable
+.B PROLOGPATH
+(like
+.B PATH
+a list of directories separated by colons).
+If not found this way
+the file will be searched for in
+.B /u/lib/prolog.
+.PP
+If not overrided by option
+.B \-s
+the file
+.B startup
+will be consulted at the beginning.
+Using
+.B PROLOGPATH
+it is possible to have an individual startup file:
+.IP
+.br
+consult('/u/lib/prolog/startup').   /* first action */
+.br
+/* own startup definitions */
+.PP
+After having read the startup file,
+.I prolog
+consults the given file arguments (without suffix)
+in that order,
+and starts (if not suppressed by
+.BR \-i )
+the interactive mode.
+.PP
+During interactive mode every goal is newline-terminated
+(a dot is not necessary).
+An empty line causes the interpreter to enter the meta mode,
+which allows either to leave the interpreter,
+to purge the database,
+or to continue.
+During goal proving
+interrupts
+.RB ( BREAK -key
+or ^C on some terminals) allow to
+abort current action,
+or to toggle tracing.
+Abortion can be time consuming due to space deallocation.
+.PP
+Modula--Prolog allows to implement Prolog clauses in Modula-2.
+Such a module containing Modula-2 implemented clauses can be
+linked to the interpreter this way:
+.IP
+.br
+MODPATH=/u/lib/prolog; export MODPATH
+.br
+m2c -o my_prolog clauses.m2 MPImports.m2
+.br
+.LP
+The implementation module
+.B clauses.m2
+(the name can be freely choosen)
+contains the clauses.
+.B MPImports
+serves as importing link between the interpreter module and
+the own module.
+It is imported by the interpreter and should consist of imports only.
+.PP
+Following clauses are implemented in
+.B MPUNIX
+which is imported by the default version of
+.BR MPImports.m2 :
+.LP
+.ta \w'\fIlistelement(L,I,V)\fP  'u
+.br
+\fIshell(C)\fP	when \fIC\fP is instantiated to an atom
+.br
+	it is interpreted as an shell command
+.br
+\fIlistlength(L,I)\fP	succeeds if \fIL\fP is a list with
+.br
+	\fII\fP elements
+.br
+\fIlistelement(L,I,V)\fP	succeeds if the \fII\fP-th
+.br
+	elements of \fIL\fP equals to \fIV\fP.
+.SH FILES
+.ta \w'/u/lib/prolog/plibprolog.a  'u
+.br
+/u/lib/prolog/startup.pdb	default startup file
+.br
+/u/lib/prolog/lists.pdb	further utilities
+.br
+/u/lib/prolog/sets.pdb
+.br
+/u/lib/prolog/utility.pdb
+.br
+/u/lib/prolog/libprolog.a	Modula--Prolog library
+.br
+/u/lib/prolog/SYM
+.br
+/u/lib/prolog/REF
+.br
+/u/lib/prolog/plibprolog.a	profiled library
+.br
+.SH "SEE ALSO"
+Carlo Muller, Modula--Prolog User Manual
+.br
+W.F.Clocksin, C.S.Mellish: Programming in Prolog
+.SH COPYRIGHT
+BBC Brown, Bovery & Company, Limited,
+Baden / Switzerland, 1985

@@ -1,0 +1,10 @@
+#define	SETTRC	0
+#define	RDUSER	2
+#define	RIUSER	1
+#define	WDUSER	5
+#define WIUSER	4
+#define	RUREGS	3
+#define	WUREGS	6
+#define	CONTIN	7
+#define	SINGLE	9
+#define	EXIT	8

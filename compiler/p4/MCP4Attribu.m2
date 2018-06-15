@@ -1,0 +1,3 @@
+IMPLEMENTATION MODULE MCP4AttributSys;
+
+END MCP4AttributSys.

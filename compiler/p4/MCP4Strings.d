@@ -1,0 +1,5 @@
+DEFINITION MODULE MCP4Strings;
+
+   PROCEDURE PrintStrings;
+
+END MCP4Strings.

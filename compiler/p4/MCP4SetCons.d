@@ -1,0 +1,5 @@
+DEFINITION MODULE MCP4SetConst;
+
+   PROCEDURE EmitSetConst;
+
+END MCP4SetConst.
