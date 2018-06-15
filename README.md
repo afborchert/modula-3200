@@ -17,10 +17,11 @@ the ISO/IEC standard 10514-1:1996.
 
 ## Architecture
 
-This implementation was firstly on a Perkin-Elmer 3220 running
-UNIX Edition VI and later VII. Later, the sources were ported to a
-Perkin-Elmer 3280 running XELOS (the Unix variant of Perkin-Elmer whose
-computer division had at this time been renamed to Concurrent).
+This implementation was firstly developed on a Perkin-Elmer 3220 (named
+ENDLICH) running UNIX Edition VI and later VII. Later, the sources
+were ported to a Perkin-Elmer 3280 running XELOS (the Unix variant of
+Perkin-Elmer whose computer division had at this time been renamed to
+Concurrent).
 
 The architecture of the 3200 series is a successor of the Interdata 8/32
 which in turn has similarities to the 370 architecture of IBM.
@@ -36,9 +37,9 @@ We have an agreement with the ETH Zurich that the sources which
 have been derived from the M2M-compiler may be freely redistributed
 provided that
 
-    all derived sources clearly state that Modula-2 has been designed
-    and developed at the Department of Computer Science, ETH Zurich in
-    Switzerland.
+> all derived sources clearly state that Modula-2 has been designed
+> and developed at the Department of Computer Science, ETH Zurich in
+> Switzerland.
 
 All sources of the compiler of this distribution may be freely
 redistributed if you follow the above term for the ETH-derived sources
