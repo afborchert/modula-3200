@@ -1,11 +1,10 @@
-# modula-3200
-Historic Modula-2 compiler for the minicomputers of the Perkin-Elmer 3200 series running XELOS
+# Historic Modula-2 compiler for the minicomputers of the Perkin-Elmer 3200 series running XELOS
 
 ## Background
 
 Modula-2 and the origins of our family of Modula-2 compilers have been
 designed and developed at the Department of Computer Science, ETH
-Zurich in Switzerland (see http://www.inf.ethz.ch) by Niklaus Wirth
+Zürich in Switzerland (see http://www.inf.ethz.ch) by Niklaus Wirth
 and his team.
 
 In December 1981, we licensed the sources of the M2M compiler (4-pass
@@ -29,11 +28,11 @@ which in turn has similarities to the 370 architecture of IBM.
 The Computer History Simulation Project (see https://github.com/simh/simh)
 provides support for the Interdata 8/32. Unfortunately, this compiler
 does not run on that simulator as it uses instructions which were
-added later for the 3200 series.
+added later to the 3200 series.
 
 ## License
 
-We have an agreement with the ETH Zurich that the sources which
+We have an agreement with the ETH Zürich that the sources which
 have been derived from the M2M-compiler may be freely redistributed
 provided that
 
@@ -56,4 +55,7 @@ License, Version 2 (as found in the file COPYING.LIB).
 
 ## See also
 
-http://www.mathematik.uni-ulm.de/modula/history/
+More about the historic bootstrapping process that led to this
+compiler can be found at the following repositories:
+ * https://github.com/afborchert/lilith
+ * https://github.com/afborchert/lilith-multipass-modula2-compiler
